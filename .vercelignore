@@ -1,7 +1,7 @@
 # Not needed on Vercel
-data/
+/data/
 *.zip
-.claude/
-.tanstack/
-.vercel/
-node_modules/
+/.claude/
+/.tanstack/
+/.vercel/
+/node_modules/

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { whatsappLink } from "@/lib/contact";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Navbar() {
@@ -33,7 +34,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <a
-            href="https://wa.me/01101195535"
+            href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs tracking-[0.25em] uppercase border border-gold px-4 py-2 text-primary hover:bg-primary hover:text-primary-foreground transition-all"

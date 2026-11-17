@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { whatsappLink } from "@/lib/contact";
 import hero from "@/assets/hero-bottle.jpg";
 
 export function Hero() {
@@ -45,7 +46,7 @@ export function Hero() {
               {t("hero.cta_explore")}
             </a>
             <a
-              href={`https://wa.me/01101195535?text=${waText}`}
+              href={`${whatsappLink()}?text=${waText}`}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-gold text-primary px-8 py-4 text-xs tracking-[0.3em] uppercase hover:bg-primary hover:text-primary-foreground transition-all"

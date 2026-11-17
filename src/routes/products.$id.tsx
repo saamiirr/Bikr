@@ -9,6 +9,7 @@ import { StockBadge } from "@/components/StockBadge";
 import { formatPrice, getStockStatus, resolveImage } from "@/data/products";
 import { getProducts } from "@/lib/api/products.functions";
 import { useProductText } from "@/lib/product-text";
+import { whatsappLink } from "@/lib/contact";
 import { MessageCircle, ArrowLeft, Check } from "lucide-react";
 
 export const Route = createFileRoute("/products/$id")({
@@ -59,10 +60,7 @@ function ProductPage() {
   const waTemplate = isAr
     ? `مرحباً، أود طلب عطر ${localizedName} من بكر.`
     : `Hello, I would like to order ${localizedName} from Bikr.`;
-  const waMessage = encodeURIComponent(
-    waTemplate,
-  );
-  const waLink = `https://wa.me/01101195535?text=${waMessage}`;
+  const waLink = whatsappLink(waTemplate);
 
   const thumbs = [productImage, productImage, productImage];
 

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MessageCircle, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { PHONE_DISPLAY, whatsappLink } from "@/lib/contact";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -24,8 +25,8 @@ export function Footer() {
         <div className="md:col-span-4">
           <p className="text-xs tracking-[0.4em] uppercase text-primary mb-6">{t("footer.contact")}</p>
           <div className="flex flex-col gap-4 text-sm">
-            <a href="https://wa.me/01101195535" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-              <MessageCircle className="w-4 h-4" /> {t("footer.whatsapp")} · 01101195535
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <MessageCircle className="w-4 h-4" /> {t("footer.whatsapp")} · <span dir="ltr">{PHONE_DISPLAY}</span>
             </a>
             <a href="https://t.me/Bikr_perfume" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
               <Send className="w-4 h-4" /> {t("footer.telegram")} · t.me/Bikr_perfume

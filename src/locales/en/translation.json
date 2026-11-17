@@ -1,0 +1,665 @@
+{
+  "nav": {
+    "collection": "Collection",
+    "maison": "Maison",
+    "craft": "Craft",
+    "contact": "Contact",
+    "order": "Order"
+  },
+  "hero": {
+    "eyebrow": "Maison Bikr · Est. 2025",
+    "title_a": "Purity in",
+    "title_em": "Every",
+    "title_b": "Drop.",
+    "subtitle": "Crafted with immaculate alcohol for a cleaner, more refined fragrance experience — a modern Arabian luxury, distilled.",
+    "cta_explore": "Explore Collection",
+    "cta_order": "Order Now",
+    "scroll": "Scroll",
+    "stats": {
+      "immaculate": "Immaculate",
+      "sillage": "Sillage",
+      "maisons": "Maisons"
+    }
+  },
+  "about": {
+    "eyebrow": "Our Philosophy",
+    "title_a": "A modern Arabian",
+    "title_em": "maison",
+    "title_b": ", distilled in light.",
+    "p1_a": "Bikr was born from a single conviction: a fragrance is only as honest as the spirit that carries it. Where the industry hides behind synthetic carriers, we begin with",
+    "p1_em": "immaculate alcohol",
+    "p1_b": " — distilled, polished, and entirely clean.",
+    "p2": "Every composition is built on rare oils, Damascena roses, and oud aged in cedar — then given the space to breathe. The result is a fragrance that wears closer, lasts longer, and never betrays its source.",
+    "pillars": {
+      "premium": "Premium ingredients",
+      "alcohol": "Immaculate alcohol",
+      "sillage": "Long-lasting sillage",
+      "luxury": "Luxury craftsmanship"
+    }
+  },
+  "why": {
+    "eyebrow": "Why Bikr",
+    "title_a": "Six promises in",
+    "title_em": "every",
+    "title_b": "bottle.",
+    "items": {
+      "alcohol_t": "Immaculate Alcohol",
+      "alcohol_d": "Crystal-clean spirit that carries scent without interference.",
+      "lasting_t": "Long-Lasting Scent",
+      "lasting_d": "24+ hours of refined sillage with a velvet drydown.",
+      "premium_t": "Premium Ingredients",
+      "premium_d": "Damascena rose, Cambodian oud, aged sandalwood.",
+      "packaging_t": "Elegant Packaging",
+      "packaging_d": "Hand-finished bottles wrapped in gilded calligraphy.",
+      "luxury_t": "Luxury Experience",
+      "luxury_d": "From unboxing to wear — a private salon ritual.",
+      "craft_t": "Authentic Craftsmanship",
+      "craft_d": "Small-batch composition by master perfumers."
+    }
+  },
+  "featured": {
+    "eyebrow": "The Collection",
+    "title_a": "Signature",
+    "title_em": "fragrances",
+    "title_b": ".",
+    "intro": "Four compositions, each built around a single rare material and a single emotional truth.",
+    "view": "View Details →",
+    "cat": {
+      "women": {
+        "eyebrow": "For Her",
+        "title": "Women's Fragrances"
+      },
+      "men": {
+        "eyebrow": "For Him · French",
+        "title": "Men's Fragrances"
+      },
+      "oriental": {
+        "eyebrow": "Oud & Oriental",
+        "title": "Oriental & Oud"
+      }
+    }
+  },
+  "testimonials": [
+    {
+      "quote": "I've never worn a fragrance that lingered with such honesty. Noir Oud is now part of who I am.",
+      "name": "Layla A.",
+      "role": "Cairo"
+    },
+    {
+      "quote": "The clarity of the alcohol is immediately obvious. There is no harshness — only the perfume itself.",
+      "name": "Marcus D.",
+      "role": "Alexandria"
+    },
+    {
+      "quote": "Bikr's Rose Impérial is the most refined rose I have ever owned. Worth every pound.",
+      "name": "Sara K.",
+      "role": "Giza"
+    }
+  ],
+  "footer": {
+    "tagline": "A modern Arabian maison crafting fragrances on immaculate alcohol — pure, lasting, and unmistakably yours.",
+    "navigate": "Navigate",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp Orders",
+    "copyright": "© {{year}} Maison Bikr",
+    "credo": "Crafted on immaculate alcohol",
+    "telegram": "Telegram Channel",
+    "instagram": "Instagram"
+  },
+  "product": {
+    "back": "Back to Collection",
+    "maison": "Maison Bikr",
+    "size": "50ml Eau de Parfum",
+    "pyramid": "Fragrance Pyramid",
+    "top": "Top Notes",
+    "heart": "Heart Notes",
+    "base": "Base Notes",
+    "features": {
+      "alcohol": "Immaculate alcohol",
+      "lasting": "Long-lasting wear",
+      "oils": "Premium fragrance oils",
+      "packaging": "Luxury packaging"
+    },
+    "order_wa": "Order via WhatsApp",
+    "order_note": "Replies within minutes · Worldwide shipping",
+    "related_eyebrow": "You May Also Love",
+    "related_title_a": "Related",
+    "related_title_em": "fragrances",
+    "not_found": "Fragrance not found",
+    "return_home": "← Return Home",
+    "wa_message": "Hello, I would like to order {{name}} from Bikr."
+  },
+  "language": "Language",
+  "products": {
+    "coco-chanel": {
+      "name": "Coco Chanel",
+      "tagline": "Iconic oriental femininity.",
+      "description": "A timeless oriental composition layering rose, jasmine and warm amber for an unmistakably feminine sillage.",
+      "notes": {
+        "top": [
+          "Bergamot",
+          "Orange Blossom"
+        ],
+        "middle": [
+          "Rose",
+          "Jasmine",
+          "Mimosa"
+        ],
+        "base": [
+          "Amber",
+          "Sandalwood",
+          "Vanilla"
+        ]
+      }
+    },
+    "si-passione": {
+      "name": "Sì Passione",
+      "tagline": "Vibrant red velvet bloom.",
+      "description": "A vibrant floral chypre with pear nectar, heart of rose and a sensual base of vanilla and musk.",
+      "notes": {
+        "top": [
+          "Pear",
+          "Blackcurrant"
+        ],
+        "middle": [
+          "Rose Absolute",
+          "Geranium"
+        ],
+        "base": [
+          "Vanilla",
+          "Musk",
+          "Patchouli"
+        ]
+      }
+    },
+    "good-girl": {
+      "name": "Good Girl",
+      "tagline": "Bold tuberose by night.",
+      "description": "Tuberose and jasmine sambac wrapped in tonka and cocoa — a confident, after-dark statement.",
+      "notes": {
+        "top": [
+          "Almond",
+          "Coffee"
+        ],
+        "middle": [
+          "Tuberose",
+          "Jasmine Sambac"
+        ],
+        "base": [
+          "Cocoa",
+          "Tonka",
+          "Sandalwood"
+        ]
+      }
+    },
+    "sexy-graffiti": {
+      "name": "Sexy Graffiti",
+      "tagline": "Playful sweet floral burst.",
+      "description": "A playful sweet floral with red berries, peony and a creamy musky drydown.",
+      "notes": {
+        "top": [
+          "Raspberry",
+          "Pink Pepper"
+        ],
+        "middle": [
+          "Peony",
+          "Rose"
+        ],
+        "base": [
+          "White Musk",
+          "Vanilla"
+        ]
+      }
+    },
+    "moon-sparkle": {
+      "name": "Moon Sparkle",
+      "tagline": "Luminous floral musk.",
+      "description": "A luminous, powdery floral that glows on the skin like moonlight on silk.",
+      "notes": {
+        "top": [
+          "Lychee",
+          "Bergamot"
+        ],
+        "middle": [
+          "Peony",
+          "Magnolia"
+        ],
+        "base": [
+          "White Musk",
+          "Cedar"
+        ]
+      }
+    },
+    "midnight-rose": {
+      "name": "Midnight Rose",
+      "tagline": "Dark velvet rose noir.",
+      "description": "A darker take on rose, threaded with blackcurrant and patchouli for an intimate, velvety trail.",
+      "notes": {
+        "top": [
+          "Blackcurrant",
+          "Raspberry"
+        ],
+        "middle": [
+          "Damascena Rose",
+          "Violet"
+        ],
+        "base": [
+          "Patchouli",
+          "Amber"
+        ]
+      }
+    },
+    "coco-vanille": {
+      "name": "Coco Vanille",
+      "tagline": "Creamy coconut & vanilla.",
+      "description": "A gourmand cloud of coconut milk, Madagascar vanilla and warm tonka — addictive and sun-soft.",
+      "notes": {
+        "top": [
+          "Coconut",
+          "Almond"
+        ],
+        "middle": [
+          "Vanilla Orchid",
+          "Heliotrope"
+        ],
+        "base": [
+          "Tonka",
+          "Sandalwood",
+          "Musk"
+        ]
+      }
+    },
+    "sauvage": {
+      "name": "Sauvage",
+      "tagline": "Raw freshness, ambroxan trail.",
+      "description": "A radically fresh composition of Calabrian bergamot and ambroxan — magnetic and effortlessly masculine.",
+      "notes": {
+        "top": [
+          "Calabrian Bergamot",
+          "Pepper"
+        ],
+        "middle": [
+          "Sichuan Pepper",
+          "Lavender",
+          "Geranium"
+        ],
+        "base": [
+          "Ambroxan",
+          "Cedar",
+          "Labdanum"
+        ]
+      }
+    },
+    "black-xs": {
+      "name": "Black XS",
+      "tagline": "Rock-edge dark floral.",
+      "description": "A rock-inspired oriental with tagete, praline and a smooth amber backbone.",
+      "notes": {
+        "top": [
+          "Lemon",
+          "Cinnamon"
+        ],
+        "middle": [
+          "Tagete",
+          "Praline"
+        ],
+        "base": [
+          "Amber",
+          "Tonka",
+          "Patchouli"
+        ]
+      }
+    },
+    "ultra-male": {
+      "name": "Ultra Male",
+      "tagline": "Sweet fougère, club energy.",
+      "description": "A sweet, electric fougère of lavender, pear and vanilla designed for the dancefloor.",
+      "notes": {
+        "top": [
+          "Lavender",
+          "Pear",
+          "Mint"
+        ],
+        "middle": [
+          "Cinnamon",
+          "Cardamom"
+        ],
+        "base": [
+          "Vanilla",
+          "Tonka",
+          "Amber"
+        ]
+      }
+    },
+    "voyage": {
+      "name": "Voyage",
+      "tagline": "Crisp aquatic woods.",
+      "description": "A crisp aquatic woody scent for the modern traveler — clean, confident, day-to-night.",
+      "notes": {
+        "top": [
+          "Sea Notes",
+          "Bergamot"
+        ],
+        "middle": [
+          "Cardamom",
+          "Geranium"
+        ],
+        "base": [
+          "Cedar",
+          "Vetiver",
+          "Musk"
+        ]
+      }
+    },
+    "acqua-di-gio": {
+      "name": "Acqua di Gio",
+      "tagline": "Mediterranean sea breeze.",
+      "description": "An aromatic marine classic — citrus, sea spray and warm woods straight from the Mediterranean.",
+      "notes": {
+        "top": [
+          "Marine Notes",
+          "Bergamot",
+          "Neroli"
+        ],
+        "middle": [
+          "Rosemary",
+          "Jasmine"
+        ],
+        "base": [
+          "Patchouli",
+          "Cedar",
+          "Musk"
+        ]
+      }
+    },
+    "le-male-elixir": {
+      "name": "Le Male Elixir",
+      "tagline": "Lavender honey tobacco.",
+      "description": "A rich elixir of lavender, honey and tonka with a smoky tobacco finish.",
+      "notes": {
+        "top": [
+          "Lavender",
+          "Mint"
+        ],
+        "middle": [
+          "Honey",
+          "Cinnamon"
+        ],
+        "base": [
+          "Tonka",
+          "Tobacco",
+          "Benzoin"
+        ]
+      }
+    },
+    "stronger-with-you": {
+      "name": "Stronger With You",
+      "tagline": "Spicy chestnut, glass note.",
+      "description": "A spicy oriental with pink pepper, lavender and a gourmand chestnut-vanilla drydown.",
+      "notes": {
+        "top": [
+          "Pink Pepper",
+          "Cardamom"
+        ],
+        "middle": [
+          "Lavender",
+          "Violet"
+        ],
+        "base": [
+          "Chestnut",
+          "Vanilla",
+          "Cedar"
+        ]
+      }
+    },
+    "sculpture": {
+      "name": "Sculpture",
+      "tagline": "Sleek powdery oriental.",
+      "description": "A sculpted oriental — peach blossom, cedar and amber carved into a clean, lasting silhouette.",
+      "notes": {
+        "top": [
+          "Peach",
+          "Bergamot"
+        ],
+        "middle": [
+          "Cedar",
+          "Iris"
+        ],
+        "base": [
+          "Amber",
+          "Sandalwood",
+          "Musk"
+        ]
+      }
+    },
+    "zara-gold": {
+      "name": "Zara Gold",
+      "tagline": "Modern golden oud.",
+      "description": "A modern, polished oud with saffron, leather and a touch of vanilla warmth.",
+      "notes": {
+        "top": [
+          "Saffron",
+          "Bergamot"
+        ],
+        "middle": [
+          "Oud",
+          "Leather"
+        ],
+        "base": [
+          "Vanilla",
+          "Amber",
+          "Musk"
+        ]
+      }
+    },
+    "lacoste-white": {
+      "name": "Lacoste White",
+      "tagline": "Crisp clean cotton.",
+      "description": "An effortlessly clean composition — green apple, cedar and ylang for daily refinement.",
+      "notes": {
+        "top": [
+          "Green Apple",
+          "Grapefruit"
+        ],
+        "middle": [
+          "Ylang-Ylang",
+          "Rosemary"
+        ],
+        "base": [
+          "Cedar",
+          "Vetiver",
+          "Musk"
+        ]
+      }
+    },
+    "creed-aventus": {
+      "name": "Creed Aventus",
+      "tagline": "Smoky pineapple icon.",
+      "description": "The legendary blend of pineapple, birch and oakmoss — bold, smoky and unmistakably regal.",
+      "notes": {
+        "top": [
+          "Pineapple",
+          "Bergamot",
+          "Blackcurrant"
+        ],
+        "middle": [
+          "Birch",
+          "Rose",
+          "Jasmine"
+        ],
+        "base": [
+          "Oakmoss",
+          "Musk",
+          "Vanilla"
+        ]
+      }
+    },
+    "boss-the-scent": {
+      "name": "Boss The Scent",
+      "tagline": "Magnetic ginger leather.",
+      "description": "A magnetic men's signature with ginger, exotic maninka fruit and warm leather.",
+      "notes": {
+        "top": [
+          "Ginger",
+          "Mandarin"
+        ],
+        "middle": [
+          "Maninka Fruit",
+          "Lavender"
+        ],
+        "base": [
+          "Leather",
+          "Cacao"
+        ]
+      }
+    },
+    "powder-musk": {
+      "name": "Powder Musk",
+      "tagline": "Soft skin-musk veil.",
+      "description": "A skin-close powdery musk that breathes like clean linen and warm cashmere.",
+      "notes": {
+        "top": [
+          "Aldehydes",
+          "Bergamot"
+        ],
+        "middle": [
+          "Iris",
+          "Heliotrope"
+        ],
+        "base": [
+          "White Musk",
+          "Sandalwood"
+        ]
+      }
+    },
+    "oud-bouquet": {
+      "name": "Oud Bouquet",
+      "tagline": "Rose & oud bouquet.",
+      "description": "A floral oud bouquet — Taifi rose entwined with smoky oud and warm amber.",
+      "notes": {
+        "top": [
+          "Saffron",
+          "Bergamot"
+        ],
+        "middle": [
+          "Taifi Rose",
+          "Oud"
+        ],
+        "base": [
+          "Amber",
+          "Musk",
+          "Sandalwood"
+        ]
+      }
+    },
+    "madawi": {
+      "name": "Madawi",
+      "tagline": "Honeyed oud opulence.",
+      "description": "An opulent honeyed oud with saffron, dates and a long, resinous drydown.",
+      "notes": {
+        "top": [
+          "Saffron",
+          "Bergamot"
+        ],
+        "middle": [
+          "Honey",
+          "Dates",
+          "Rose"
+        ],
+        "base": [
+          "Oud",
+          "Amber",
+          "Sandalwood"
+        ]
+      }
+    },
+    "turab-al-dhahab": {
+      "name": "Turab Al Dhahab",
+      "tagline": "Golden desert earth.",
+      "description": "Golden earth of the desert — incense, gilded woods and a whisper of saffron.",
+      "notes": {
+        "top": [
+          "Incense",
+          "Saffron"
+        ],
+        "middle": [
+          "Rose",
+          "Oud"
+        ],
+        "base": [
+          "Amber",
+          "Sandalwood",
+          "Musk"
+        ]
+      }
+    },
+    "kalemat": {
+      "name": "Kalemat",
+      "tagline": "Words of warm amber.",
+      "description": "A warm amber composition of honey, vanilla and oriental spices — soft as whispered words.",
+      "notes": {
+        "top": [
+          "Honey",
+          "Bergamot"
+        ],
+        "middle": [
+          "Spices",
+          "Rose"
+        ],
+        "base": [
+          "Amber",
+          "Vanilla",
+          "Musk"
+        ]
+      }
+    },
+    "oud-abyad": {
+      "name": "Oud Abyad",
+      "tagline": "White oud, luminous wood.",
+      "description": "A luminous white oud — cleaner, brighter, layered with citrus and creamy sandalwood.",
+      "notes": {
+        "top": [
+          "Lemon",
+          "Saffron"
+        ],
+        "middle": [
+          "White Oud",
+          "Rose"
+        ],
+        "base": [
+          "Sandalwood",
+          "Amber",
+          "Musk"
+        ]
+      }
+    },
+    "bm": {
+      "name": "BM",
+      "tagline": "Signature Bikr Maison.",
+      "description": "The signature of Maison Bikr — oud, rose, amber and immaculate alcohol composed into a private trail.",
+      "notes": {
+        "top": [
+          "Saffron",
+          "Bergamot",
+          "Pink Pepper"
+        ],
+        "middle": [
+          "Rose",
+          "Oud",
+          "Jasmine"
+        ],
+        "base": [
+          "Amber",
+          "Sandalwood",
+          "Musk"
+        ]
+      }
+    }
+  },
+  "stock": {
+    "in": "In stock",
+    "low": "Only {{n}} left",
+    "out": "Sold out",
+    "order_disabled": "Currently unavailable"
+  }
+}

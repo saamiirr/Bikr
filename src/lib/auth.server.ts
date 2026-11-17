@@ -41,6 +41,13 @@ function getSecret() {
     });
     return secretPromise;
   }
+  if (process.env.VERCEL) {
+    // No disk and no database online: derive the key from the login details.
+    const c = credentials();
+    return Promise.resolve(
+      crypto.createHash("sha256").update(`bikr-session\0${c.username}\0${c.password}`).digest(),
+    );
+  }
   secretPromise ??= (async () => {
     const file = path.resolve(process.cwd(), "data", ".session-secret");
     try {

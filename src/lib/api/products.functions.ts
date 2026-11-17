@@ -10,6 +10,8 @@ import {
   listProducts,
   removeProduct,
   saveImage,
+  getRedis,
+  storageStatus,
   updateProduct,
 } from "../store.server";
 
@@ -23,9 +25,19 @@ export const getProduct = createServerFn({ method: "GET" })
 
 // ---------- Admin session ----------
 
-export const getAdminStatus = createServerFn({ method: "GET" }).handler(async () => ({
-  isAdmin: await isAdmin(),
-}));
+export const getAdminStatus = createServerFn({ method: "GET" }).handler(async () => {
+  if (!(await isAdmin())) return { isAdmin: false as const, storage: null, storageError: null };
+  const storage = storageStatus();
+  let storageError: string | null = null;
+  if (storage.products === "redis") {
+    try {
+      await getRedis()!.ping();
+    } catch (err) {
+      storageError = `Can't reach the Redis database: ${err instanceof Error ? err.message : String(err)}`;
+    }
+  }
+  return { isAdmin: true as const, storage, storageError };
+});
 
 export const adminLogin = createServerFn({ method: "POST" })
   .inputValidator(z.object({ username: z.string().max(200), password: z.string().max(200) }))

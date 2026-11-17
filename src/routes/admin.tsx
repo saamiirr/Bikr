@@ -68,8 +68,11 @@ export const Route = createFileRoute("/admin")({
     meta: [{ title: "Admin — Bikr" }, { name: "robots", content: "noindex, nofollow" }],
   }),
   loader: async () => {
-    const { isAdmin } = await getAdminStatus();
-    return { isAdmin, products: isAdmin ? await getProducts() : [] };
+    const status = await getAdminStatus();
+    if (!status.isAdmin) return { ...status, products: [] as Product[] };
+    // Don't let a database problem hide the setup message below.
+    const products = await getProducts().catch(() => [] as Product[]);
+    return { ...status, products };
   },
   component: AdminPage,
 });
@@ -81,12 +84,49 @@ const CATEGORY_LABEL: Record<Category, string> = {
 };
 
 function AdminPage() {
-  const { isAdmin, products } = Route.useLoaderData();
+  const { isAdmin, products, storage, storageError } = Route.useLoaderData();
   return (
     <main dir="ltr" className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" />
-      {isAdmin ? <Dashboard initialProducts={products} /> : <LoginForm />}
+      {isAdmin ? (
+        <>
+          <StorageNotice storage={storage} error={storageError} />
+          <Dashboard initialProducts={products} />
+        </>
+      ) : (
+        <LoginForm />
+      )}
     </main>
+  );
+}
+
+// ---------------- Storage setup notice ----------------
+
+type StorageInfo = { products: "redis" | "file" | "none"; photos: "blob" | "file" | "none" } | null;
+
+function StorageNotice({ storage, error }: { storage: StorageInfo; error: string | null }) {
+  const problems: string[] = [];
+  if (storage?.products === "none") {
+    problems.push(
+      "No database is connected, so changes can't be saved. The shop is showing the starting catalogue. In Vercel, open your project → Storage → connect Upstash for Redis → then redeploy.",
+    );
+  }
+  if (error) problems.push(error);
+  if (storage?.photos === "none") {
+    problems.push(
+      "Photo storage isn't connected, so new photos can't be uploaded. In Vercel → Storage → create a Blob store with Public access, connect it to this project, then redeploy.",
+    );
+  }
+  if (problems.length === 0) return null;
+  return (
+    <div role="alert" className="mx-auto max-w-6xl px-4 md:px-8 pt-6">
+      <div className="border border-amber-500/50 bg-amber-500/10 p-4 text-sm text-amber-200 space-y-2">
+        <p className="font-medium text-amber-300">Setup needed</p>
+        {problems.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+      </div>
+    </div>
   );
 }
 

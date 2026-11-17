@@ -79,11 +79,54 @@ if v < 0 then v = 0 redis.call('HSET', KEYS[1], ARGV[1], 0) end
 if v > ${MAX_STOCK} then v = ${MAX_STOCK} redis.call('HSET', KEYS[1], ARGV[1], v) end
 return v`;
 
+/**
+ * Finds the Upstash REST credentials. Vercel lets you pick a custom prefix when
+ * connecting the database (e.g. STORAGE_KV_REST_API_URL), so any prefix works.
+ */
+function findRedisEnv(): { url: string; token: string } | null {
+  const env = process.env;
+  const pairs: [string, string][] = [
+    ["KV_REST_API_URL", "KV_REST_API_TOKEN"],
+    ["UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN"],
+  ];
+  for (const [urlKey, tokenKey] of pairs) {
+    if (env[urlKey] && env[tokenKey]) return { url: env[urlKey]!, token: env[tokenKey]! };
+  }
+  for (const key of Object.keys(env)) {
+    for (const [urlKey, tokenKey] of pairs) {
+      if (!key.endsWith(`_${urlKey}`)) continue;
+      const prefix = key.slice(0, -urlKey.length);
+      const url = env[key];
+      const token = env[`${prefix}${tokenKey}`];
+      if (url && /^https?:\/\//.test(url) && token) return { url, token };
+    }
+  }
+  return null;
+}
+
 export function getRedis(): Redis | null {
-  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return null;
-  return new Redis({ url, token, automaticDeserialization: false });
+  const creds = findRedisEnv();
+  if (!creds) return null;
+  return new Redis({ ...creds, automaticDeserialization: false });
+}
+
+/** Where products are stored right now — shown on the admin page. */
+export function storageStatus(): { products: "redis" | "file" | "none"; photos: "blob" | "file" | "none" } {
+  const online = Boolean(process.env.VERCEL);
+  return {
+    products: findRedisEnv() ? "redis" : online ? "none" : "file",
+    photos: process.env.BLOB_READ_WRITE_TOKEN ? "blob" : online ? "none" : "file",
+  };
+}
+
+const NO_DATABASE =
+  "No database connected. In Vercel, open Storage, connect Upstash for Redis to this project, then redeploy.";
+
+/** Used online when no database is connected: shows the starting catalogue, refuses changes. */
+function readOnlyBackend(): Backend {
+  const seed = buildSeed();
+  const refuse = () => Promise.reject(new Error(NO_DATABASE));
+  return { list: async () => seed, create: refuse, update: refuse, remove: refuse, stock: refuse };
 }
 
 /** HGETALL comes back as [field, value, field, value, …] when auto-deserialization is off. */
@@ -280,9 +323,8 @@ const db = () => (backend ??= (() => {
   const redis = getRedis();
   if (redis) return redisBackend(redis);
   if (process.env.VERCEL) {
-    throw new Error(
-      "No database connected. In Vercel, add Upstash Redis to this project (Storage tab) and redeploy.",
-    );
+    console.error(NO_DATABASE);
+    return readOnlyBackend();
   }
   return fileBackend();
 })());

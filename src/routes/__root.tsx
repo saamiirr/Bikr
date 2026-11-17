@@ -11,7 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import "../lib/i18n";
+import { I18nextProvider } from "react-i18next";
+// Used explicitly (not a bare import): package.json has "sideEffects": false,
+// so a bare import would be dropped from production builds.
+import i18n from "../lib/i18n";
 
 function NotFoundComponent() {
   return (
@@ -35,12 +38,13 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error: rawError, reset }: { error: unknown; reset: () => void }) {
+  const error = rawError instanceof Error ? rawError : new Error(String(rawError));
   console.error(error);
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+  }, [rawError]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -124,9 +128,11 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
+    <I18nextProvider i18n={i18n}>
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
+    </I18nextProvider>
   );
 }

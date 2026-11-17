@@ -66,7 +66,15 @@ Then open `https://<your-site>.vercel.app/admin`.
 
 ## If something's wrong
 
-- **"No database connected"**: Redis isn't connected to this project, or you
-  didn't redeploy after connecting it.
+Sign in at `/admin`. If storage isn't set up, a **Setup needed** box at the top
+says exactly what's missing. Until Redis is connected the shop still works, but
+it shows the starting catalogue and the admin can't save changes.
+
+- **"No database is connected"**: Upstash for Redis isn't connected to this
+  project, or you didn't redeploy after connecting it. Any variable prefix
+  works (e.g. `KV_…`, `UPSTASH_REDIS_…`, `STORAGE_KV_…`). Only *Upstash* is
+  supported: the "Redis" option that gives just `REDIS_URL` won't work.
 - **"Photo storage isn't connected"**: Blob store missing, or created as
   *Private*. Create a **Public** Blob store.
+- **Anything else**: in Vercel open **Logs** for the project and look for the
+  red error line.
